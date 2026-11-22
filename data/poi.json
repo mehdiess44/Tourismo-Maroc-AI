@@ -1,0 +1,34 @@
+{
+  "bab-mansour": {
+    "osm_node": "1544541381",
+    "minutes": 10
+  },
+  "bou-inania": {
+    "osm_node": "622292210",
+    "minutes": 25
+  },
+  "moulay-ismail": {
+    "osm_node": "622292186",
+    "minutes": 20
+  },
+  "heri-es-souani": {
+    "osm_node": "6312779485",
+    "minutes": 25
+  },
+  "dar-jamai": {
+    "osm_node": "622292198",
+    "minutes": 40
+  },
+  "agdal": {
+    "osm_node": "4841630278",
+    "minutes": 15
+  },
+  "qara": {
+    "osm_node": "6376600300",
+    "minutes": 15
+  },
+  "bab-el-khemis": {
+    "osm_node": "3339448849",
+    "minutes": 10
+  }
+}

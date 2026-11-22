@@ -1,0 +1,175 @@
+{
+  "passages": [
+    {
+      "id": "bab",
+      "text": "Bab Mansour se trouve devant la place El Hédim. Sa construction est attribuée à Moulay Ismaïl et son achèvement à Moulay Abdellah en 1732. Son ouverture de huit mètres forme un arc brisé. Le décor comprend une mosaïque polychrome à dominante verte et des colonnes de marbre blanc.",
+      "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/"
+    },
+    {
+      "id": "unesco",
+      "text": "La ville historique de Meknès a été inscrite en 1996 selon le critère (iv). Le sultan Moulay Ismaïl en fit sa capitale. La notice décrit des murailles élevées et des portes monumentales.",
+      "url": "https://whc.unesco.org/en/list/793/"
+    },
+    {
+      "id": "dar",
+      "text": "Le palais Dar Jamaï abrite le Musée national de la musique à Meknès.",
+      "url": "https://fnm.ma/museums/37"
+    },
+    {
+      "id": "zellige",
+      "text": "La catégorie photographique de Dar Jamaï documente des décors de zellige à Meknès.",
+      "url": "https://commons.wikimedia.org/wiki/Category:Zellij_in_Dar_Jamai,_Meknes"
+    },
+    {
+      "id": "artisanat",
+      "text": "La Maison de l’Artisan répertorie poterie, zellige et tapis-teinture à l’Ensemble d’Artisanat de Fès. Elle mentionne la baboucherie au Foundouk Sbitryine à Fès.",
+      "url": "https://mda.gov.ma/fr/communaute-des-professionnels/mise-en-relation-2/region-fes-meknes/"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question": "Dans quelle place se situe Bab Mansour ?",
+      "answer": "Devant la place El Hédim",
+      "evidence": "bab"
+    },
+    {
+      "id": 2,
+      "question": "Quel sultan fit construire Bab Mansour ?",
+      "answer": "Moulay Ismaïl",
+      "evidence": "bab"
+    },
+    {
+      "id": 3,
+      "question": "Qui acheva Bab Mansour ?",
+      "answer": "Moulay Abdellah",
+      "evidence": "bab"
+    },
+    {
+      "id": 4,
+      "question": "En quelle année Bab Mansour a-t-elle été achevée ?",
+      "answer": "1732",
+      "evidence": "bab"
+    },
+    {
+      "id": 5,
+      "question": "Quelle est la hauteur de l’ouverture de Bab Mansour ?",
+      "answer": "Huit mètres",
+      "evidence": "bab"
+    },
+    {
+      "id": 6,
+      "question": "Quelle forme a l’arc de Bab Mansour ?",
+      "answer": "Arc brisé",
+      "evidence": "bab"
+    },
+    {
+      "id": 7,
+      "question": "Quelle couleur domine la mosaïque de Bab Mansour ?",
+      "answer": "Vert",
+      "evidence": "bab"
+    },
+    {
+      "id": 8,
+      "question": "En quel matériau sont les colonnes de Bab Mansour ?",
+      "answer": "Marbre blanc",
+      "evidence": "bab"
+    },
+    {
+      "id": 9,
+      "question": "En quelle année la ville historique de Meknès a-t-elle été inscrite à l’UNESCO ?",
+      "answer": "1996",
+      "evidence": "unesco"
+    },
+    {
+      "id": 10,
+      "question": "Sous quel critère la ville historique de Meknès est-elle inscrite ?",
+      "answer": "Critère (iv)",
+      "evidence": "unesco"
+    },
+    {
+      "id": 11,
+      "question": "Qui fit de Meknès sa capitale ?",
+      "answer": "Moulay Ismaïl",
+      "evidence": "unesco"
+    },
+    {
+      "id": 12,
+      "question": "Quel musée se trouve au palais Dar Jamaï ?",
+      "answer": "Musée national de la musique",
+      "evidence": "dar"
+    },
+    {
+      "id": 13,
+      "question": "Où trouve-t-on des décors de zellige documentés à Meknès ?",
+      "answer": "Dar Jamaï",
+      "evidence": "zellige"
+    },
+    {
+      "id": 14,
+      "question": "Quel lieu à Fès répertorie la poterie et le zellige ?",
+      "answer": "Ensemble d’Artisanat de Fès",
+      "evidence": "artisanat"
+    },
+    {
+      "id": 15,
+      "question": "Quelle pratique liée aux tapis est répertoriée à l’Ensemble d’Artisanat de Fès ?",
+      "answer": "Tapis-teinture",
+      "evidence": "artisanat"
+    },
+    {
+      "id": 16,
+      "question": "Dans quel lieu la Maison de l’Artisan répertorie-t-elle la baboucherie ?",
+      "answer": "Foundouk Sbitryine",
+      "evidence": "artisanat"
+    },
+    {
+      "id": 17,
+      "question": "Quel est le prix exact du billet de Dar Jamaï aujourd’hui ?",
+      "answer": null,
+      "evidence": null
+    },
+    {
+      "id": 18,
+      "question": "Combien de tesselles comporte le zellige de Dar Jamaï ?",
+      "answer": null,
+      "evidence": null
+    },
+    {
+      "id": 19,
+      "question": "Quel est le nom de chaque artisan qui a travaillé sur Bab Mansour ?",
+      "answer": null,
+      "evidence": null
+    },
+    {
+      "id": 20,
+      "question": "Quelle est la largeur exacte de l’arc de Bab Mansour ?",
+      "answer": null,
+      "evidence": null
+    },
+    {
+      "id": 21,
+      "question": "Quel est le nombre annuel de visiteurs de Bab Mansour ?",
+      "answer": null,
+      "evidence": null
+    },
+    {
+      "id": 22,
+      "question": "Quelle est la largeur exacte du bassin Agdal ?",
+      "answer": null,
+      "evidence": null
+    },
+    {
+      "id": 23,
+      "question": "À quelle heure la Prison Qara ferme-t-elle demain ?",
+      "answer": null,
+      "evidence": null
+    },
+    {
+      "id": 24,
+      "question": "Quel atelier a fabriqué cette babouche sans photo ni provenance ?",
+      "answer": null,
+      "evidence": null
+    }
+  ]
+}

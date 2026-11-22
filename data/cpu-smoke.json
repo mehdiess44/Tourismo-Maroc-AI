@@ -1,0 +1,10 @@
+{
+  "input": "synthetic",
+  "load_seconds": 0.281,
+  "first_inference_seconds": 0.046,
+  "shape": [
+    1,
+    512
+  ],
+  "peak_working_set_mib": 165.2
+}

@@ -1,0 +1,646 @@
+[
+  {
+    "request": {
+      "departure": "bab-mansour",
+      "arrival": "dar-jamai",
+      "day": "2026-11-22",
+      "start": "10:00:00",
+      "hours": 1,
+      "speed": 3,
+      "interests": [
+        "architecture"
+      ],
+      "required": []
+    },
+    "strategies": {
+      "geographic": {
+        "status": "ok",
+        "duration": 8,
+        "walking": 8,
+        "visits": [],
+        "interest_matches": 0,
+        "distinct_interests": 0,
+        "compute_ms": 32.78
+      },
+      "network": {
+        "status": "ok",
+        "duration": 37,
+        "walking": 12,
+        "visits": [
+          "bou-inania"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 2,
+        "compute_ms": 2.33
+      },
+      "personalized": {
+        "status": "ok",
+        "duration": 37,
+        "walking": 12,
+        "visits": [
+          "bou-inania"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 2,
+        "compute_ms": 2.55
+      }
+    }
+  },
+  {
+    "request": {
+      "departure": "bab-mansour",
+      "arrival": "bab-el-khemis",
+      "day": "2026-11-22",
+      "start": "10:00:00",
+      "hours": 1,
+      "speed": 4,
+      "interests": [
+        "artisanat"
+      ],
+      "required": []
+    },
+    "strategies": {
+      "geographic": {
+        "status": "ok",
+        "duration": 14,
+        "walking": 14,
+        "visits": [],
+        "interest_matches": 0,
+        "distinct_interests": 0,
+        "compute_ms": 2.4
+      },
+      "network": {
+        "status": "ok",
+        "duration": 58,
+        "walking": 18,
+        "visits": [
+          "dar-jamai"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 3,
+        "compute_ms": 2.32
+      },
+      "personalized": {
+        "status": "ok",
+        "duration": 58,
+        "walking": 18,
+        "visits": [
+          "dar-jamai"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 3,
+        "compute_ms": 2.3
+      }
+    }
+  },
+  {
+    "request": {
+      "departure": "bab-mansour",
+      "arrival": "bab-el-khemis",
+      "day": "2026-11-22",
+      "start": "10:00:00",
+      "hours": 1,
+      "speed": 5,
+      "interests": [
+        "musees"
+      ],
+      "required": []
+    },
+    "strategies": {
+      "geographic": {
+        "status": "ok",
+        "duration": 11,
+        "walking": 11,
+        "visits": [],
+        "interest_matches": 0,
+        "distinct_interests": 0,
+        "compute_ms": 2.31
+      },
+      "network": {
+        "status": "ok",
+        "duration": 59,
+        "walking": 24,
+        "visits": [
+          "moulay-ismail",
+          "qara"
+        ],
+        "interest_matches": 0,
+        "distinct_interests": 2,
+        "compute_ms": 2.41
+      },
+      "personalized": {
+        "status": "ok",
+        "duration": 55,
+        "walking": 15,
+        "visits": [
+          "dar-jamai"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 3,
+        "compute_ms": 2.25
+      }
+    }
+  },
+  {
+    "request": {
+      "departure": "bab-mansour",
+      "arrival": "dar-jamai",
+      "day": "2026-11-22",
+      "start": "10:00:00",
+      "hours": 1,
+      "speed": 4,
+      "interests": [
+        "histoire"
+      ],
+      "required": []
+    },
+    "strategies": {
+      "geographic": {
+        "status": "ok",
+        "duration": 59,
+        "walking": 19,
+        "visits": [
+          "qara",
+          "bou-inania"
+        ],
+        "interest_matches": 2,
+        "distinct_interests": 2,
+        "compute_ms": 2.51
+      },
+      "network": {
+        "status": "ok",
+        "duration": 59,
+        "walking": 19,
+        "visits": [
+          "qara",
+          "bou-inania"
+        ],
+        "interest_matches": 2,
+        "distinct_interests": 2,
+        "compute_ms": 2.51
+      },
+      "personalized": {
+        "status": "ok",
+        "duration": 59,
+        "walking": 19,
+        "visits": [
+          "qara",
+          "bou-inania"
+        ],
+        "interest_matches": 2,
+        "distinct_interests": 2,
+        "compute_ms": 2.45
+      }
+    }
+  },
+  {
+    "request": {
+      "departure": "bab-mansour",
+      "arrival": "dar-jamai",
+      "day": "2026-11-22",
+      "start": "10:00:00",
+      "hours": 3,
+      "speed": 3,
+      "interests": [
+        "architecture"
+      ],
+      "required": []
+    },
+    "strategies": {
+      "geographic": {
+        "status": "ok",
+        "duration": 102,
+        "walking": 42,
+        "visits": [
+          "moulay-ismail",
+          "qara",
+          "bou-inania"
+        ],
+        "interest_matches": 2,
+        "distinct_interests": 2,
+        "compute_ms": 3.0
+      },
+      "network": {
+        "status": "ok",
+        "duration": 135,
+        "walking": 65,
+        "visits": [
+          "moulay-ismail",
+          "qara",
+          "bab-el-khemis",
+          "bou-inania"
+        ],
+        "interest_matches": 3,
+        "distinct_interests": 2,
+        "compute_ms": 2.86
+      },
+      "personalized": {
+        "status": "ok",
+        "duration": 135,
+        "walking": 65,
+        "visits": [
+          "moulay-ismail",
+          "qara",
+          "bab-el-khemis",
+          "bou-inania"
+        ],
+        "interest_matches": 3,
+        "distinct_interests": 2,
+        "compute_ms": 2.71
+      }
+    }
+  },
+  {
+    "request": {
+      "departure": "bab-mansour",
+      "arrival": "bab-el-khemis",
+      "day": "2026-11-22",
+      "start": "10:00:00",
+      "hours": 3,
+      "speed": 4,
+      "interests": [
+        "artisanat"
+      ],
+      "required": []
+    },
+    "strategies": {
+      "geographic": {
+        "status": "ok",
+        "duration": 14,
+        "walking": 14,
+        "visits": [],
+        "interest_matches": 0,
+        "distinct_interests": 0,
+        "compute_ms": 2.93
+      },
+      "network": {
+        "status": "ok",
+        "duration": 141,
+        "walking": 41,
+        "visits": [
+          "moulay-ismail",
+          "bou-inania",
+          "dar-jamai",
+          "qara"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 4,
+        "compute_ms": 2.76
+      },
+      "personalized": {
+        "status": "ok",
+        "duration": 109,
+        "walking": 29,
+        "visits": [
+          "bou-inania",
+          "dar-jamai",
+          "qara"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 4,
+        "compute_ms": 2.73
+      }
+    }
+  },
+  {
+    "request": {
+      "departure": "bab-mansour",
+      "arrival": "bab-el-khemis",
+      "day": "2026-11-22",
+      "start": "10:00:00",
+      "hours": 3,
+      "speed": 5,
+      "interests": [
+        "musees"
+      ],
+      "required": []
+    },
+    "strategies": {
+      "geographic": {
+        "status": "ok",
+        "duration": 11,
+        "walking": 11,
+        "visits": [],
+        "interest_matches": 0,
+        "distinct_interests": 0,
+        "compute_ms": 2.8
+      },
+      "network": {
+        "status": "ok",
+        "duration": 132,
+        "walking": 32,
+        "visits": [
+          "moulay-ismail",
+          "bou-inania",
+          "dar-jamai",
+          "qara"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 4,
+        "compute_ms": 2.63
+      },
+      "personalized": {
+        "status": "ok",
+        "duration": 103,
+        "walking": 23,
+        "visits": [
+          "bou-inania",
+          "dar-jamai",
+          "qara"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 4,
+        "compute_ms": 2.68
+      }
+    }
+  },
+  {
+    "request": {
+      "departure": "bab-mansour",
+      "arrival": "dar-jamai",
+      "day": "2026-11-22",
+      "start": "10:00:00",
+      "hours": 3,
+      "speed": 4,
+      "interests": [
+        "histoire"
+      ],
+      "required": []
+    },
+    "strategies": {
+      "geographic": {
+        "status": "ok",
+        "duration": 93,
+        "walking": 33,
+        "visits": [
+          "moulay-ismail",
+          "qara",
+          "bou-inania"
+        ],
+        "interest_matches": 3,
+        "distinct_interests": 2,
+        "compute_ms": 3.04
+      },
+      "network": {
+        "status": "ok",
+        "duration": 179,
+        "walking": 79,
+        "visits": [
+          "qara",
+          "heri-es-souani",
+          "agdal",
+          "moulay-ismail",
+          "bou-inania"
+        ],
+        "interest_matches": 5,
+        "distinct_interests": 2,
+        "compute_ms": 3.37
+      },
+      "personalized": {
+        "status": "ok",
+        "duration": 179,
+        "walking": 79,
+        "visits": [
+          "qara",
+          "heri-es-souani",
+          "agdal",
+          "moulay-ismail",
+          "bou-inania"
+        ],
+        "interest_matches": 5,
+        "distinct_interests": 2,
+        "compute_ms": 3.2
+      }
+    }
+  },
+  {
+    "request": {
+      "departure": "bab-mansour",
+      "arrival": "dar-jamai",
+      "day": "2026-11-22",
+      "start": "10:00:00",
+      "hours": 6,
+      "speed": 3,
+      "interests": [
+        "architecture"
+      ],
+      "required": []
+    },
+    "strategies": {
+      "geographic": {
+        "status": "ok",
+        "duration": 102,
+        "walking": 42,
+        "visits": [
+          "moulay-ismail",
+          "qara",
+          "bou-inania"
+        ],
+        "interest_matches": 2,
+        "distinct_interests": 2,
+        "compute_ms": 3.14
+      },
+      "network": {
+        "status": "ok",
+        "duration": 234,
+        "walking": 124,
+        "visits": [
+          "qara",
+          "bab-el-khemis",
+          "heri-es-souani",
+          "agdal",
+          "moulay-ismail",
+          "bou-inania"
+        ],
+        "interest_matches": 4,
+        "distinct_interests": 2,
+        "compute_ms": 2.92
+      },
+      "personalized": {
+        "status": "ok",
+        "duration": 234,
+        "walking": 124,
+        "visits": [
+          "qara",
+          "bab-el-khemis",
+          "heri-es-souani",
+          "agdal",
+          "moulay-ismail",
+          "bou-inania"
+        ],
+        "interest_matches": 4,
+        "distinct_interests": 2,
+        "compute_ms": 3.41
+      }
+    }
+  },
+  {
+    "request": {
+      "departure": "bab-mansour",
+      "arrival": "bab-el-khemis",
+      "day": "2026-11-22",
+      "start": "10:00:00",
+      "hours": 6,
+      "speed": 4,
+      "interests": [
+        "artisanat"
+      ],
+      "required": []
+    },
+    "strategies": {
+      "geographic": {
+        "status": "ok",
+        "duration": 14,
+        "walking": 14,
+        "visits": [],
+        "interest_matches": 0,
+        "distinct_interests": 0,
+        "compute_ms": 3.06
+      },
+      "network": {
+        "status": "ok",
+        "duration": 229,
+        "walking": 89,
+        "visits": [
+          "qara",
+          "dar-jamai",
+          "bou-inania",
+          "moulay-ismail",
+          "agdal",
+          "heri-es-souani"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 4,
+        "compute_ms": 2.94
+      },
+      "personalized": {
+        "status": "ok",
+        "duration": 109,
+        "walking": 29,
+        "visits": [
+          "bou-inania",
+          "dar-jamai",
+          "qara"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 4,
+        "compute_ms": 3.09
+      }
+    }
+  },
+  {
+    "request": {
+      "departure": "bab-mansour",
+      "arrival": "bab-el-khemis",
+      "day": "2026-11-22",
+      "start": "10:00:00",
+      "hours": 6,
+      "speed": 5,
+      "interests": [
+        "musees"
+      ],
+      "required": []
+    },
+    "strategies": {
+      "geographic": {
+        "status": "ok",
+        "duration": 11,
+        "walking": 11,
+        "visits": [],
+        "interest_matches": 0,
+        "distinct_interests": 0,
+        "compute_ms": 2.78
+      },
+      "network": {
+        "status": "ok",
+        "duration": 211,
+        "walking": 71,
+        "visits": [
+          "qara",
+          "dar-jamai",
+          "bou-inania",
+          "moulay-ismail",
+          "agdal",
+          "heri-es-souani"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 4,
+        "compute_ms": 2.85
+      },
+      "personalized": {
+        "status": "ok",
+        "duration": 103,
+        "walking": 23,
+        "visits": [
+          "bou-inania",
+          "dar-jamai",
+          "qara"
+        ],
+        "interest_matches": 1,
+        "distinct_interests": 4,
+        "compute_ms": 3.14
+      }
+    }
+  },
+  {
+    "request": {
+      "departure": "bab-mansour",
+      "arrival": "dar-jamai",
+      "day": "2026-11-22",
+      "start": "10:00:00",
+      "hours": 6,
+      "speed": 4,
+      "interests": [
+        "histoire"
+      ],
+      "required": []
+    },
+    "strategies": {
+      "geographic": {
+        "status": "ok",
+        "duration": 93,
+        "walking": 33,
+        "visits": [
+          "moulay-ismail",
+          "qara",
+          "bou-inania"
+        ],
+        "interest_matches": 3,
+        "distinct_interests": 2,
+        "compute_ms": 3.09
+      },
+      "network": {
+        "status": "ok",
+        "duration": 205,
+        "walking": 95,
+        "visits": [
+          "qara",
+          "bab-el-khemis",
+          "heri-es-souani",
+          "agdal",
+          "moulay-ismail",
+          "bou-inania"
+        ],
+        "interest_matches": 6,
+        "distinct_interests": 2,
+        "compute_ms": 2.7
+      },
+      "personalized": {
+        "status": "ok",
+        "duration": 205,
+        "walking": 95,
+        "visits": [
+          "qara",
+          "bab-el-khemis",
+          "heri-es-souani",
+          "agdal",
+          "moulay-ismail",
+          "bou-inania"
+        ],
+        "interest_matches": 6,
+        "distinct_interests": 2,
+        "compute_ms": 2.66
+      }
+    }
+  }
+]

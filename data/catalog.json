@@ -1,0 +1,299 @@
+[
+  {
+    "id": "bab-mansour",
+    "name": "Bab Mansour",
+    "aliases": [
+      "Bab Mansour Laalej",
+      "Bab el-Mansour"
+    ],
+    "interests": [
+      "architecture",
+      "histoire"
+    ],
+    "kind": "monument",
+    "facts": [
+      {
+        "text": "La porte est connue sous le nom de Bab Mansour Laalej.",
+        "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+        "passage": "Titre et notice du monument",
+        "checked_on": "2026-11-22"
+      },
+      {
+        "text": "La porte se trouve devant la place El Hédim.",
+        "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+        "passage": "Notice du monument, premier paragraphe",
+        "checked_on": "2026-11-22"
+      },
+      {
+        "text": "Le Conseil préfectoral du tourisme date l’achèvement de la porte de 1732, sous Moulay Abdellah.",
+        "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+        "passage": "Notice du monument, premier paragraphe",
+        "checked_on": "2026-11-22"
+      },
+      {
+        "text": "L’ouverture forme un arc brisé et la porte est ornée d’une mosaïque polychrome.",
+        "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+        "passage": "Description architecturale de la porte",
+        "checked_on": "2026-11-22"
+      }
+    ],
+    "related": [],
+    "status": "source_identifiee"
+  },
+  {
+    "id": "bou-inania",
+    "name": "Médersa Bou Inania de Meknès",
+    "aliases": [
+      "Medersa Bou Inania",
+      "Al Madrasa Bouanania"
+    ],
+    "interests": [
+      "architecture",
+      "histoire"
+    ],
+    "kind": "monument",
+    "facts": [
+      {
+        "text": "La médersa était une école coranique au centre de la médina. Sa cour est décorée de zelliges, de plâtre ciselé et de bois sculpté.",
+        "url": "https://visit-meknes.com/fr/portfolio/medersa-bou-inania/",
+        "passage": "Notice, description de l’édifice et de sa cour",
+        "checked_on": "2026-11-22"
+      }
+    ],
+    "related": [],
+    "status": "source_identifiee",
+    "published_hours": {
+      "text": "09 h–12 h et 14 h–18 h",
+      "url": "https://visit-meknes.com/fr/portfolio/medersa-bou-inania/",
+      "checked_on": "2026-11-22"
+    }
+  },
+  {
+    "id": "moulay-ismail",
+    "name": "Mausolée Moulay Ismaïl",
+    "aliases": [
+      "Moulay Ismail"
+    ],
+    "interests": [
+      "architecture",
+      "histoire"
+    ],
+    "kind": "monument",
+    "facts": [
+      {
+        "text": "Le mausolée conserve la tombe de Moulay Ismaïl aux côtés de membres de sa famille.",
+        "url": "https://visit-meknes.com/fr/portfolio/le-tombeau-de-moulay-ismail-mausolee/",
+        "passage": "Notice, description des tombeaux royaux",
+        "checked_on": "2026-11-22"
+      }
+    ],
+    "related": [],
+    "status": "source_identifiee",
+    "published_hours": {
+      "text": "09 h–18 h 30",
+      "url": "https://visit-meknes.com/fr/portfolio/le-tombeau-de-moulay-ismail-mausolee/",
+      "checked_on": "2026-11-22"
+    }
+  },
+  {
+    "id": "heri-es-souani",
+    "name": "Héri es-Souani",
+    "aliases": [
+      "Heri Souani",
+      "Greniers royaux"
+    ],
+    "interests": [
+      "architecture",
+      "histoire"
+    ],
+    "kind": "monument",
+    "facts": [
+      {
+        "text": "Le complexe comprend Dar Al Ma, la maison de l’eau, et des greniers organisés en séries d’arcades.",
+        "url": "https://visit-meknes.com/fr/portfolio/heri-souani-et-dar-el-ma/",
+        "passage": "Notice, les deux parties du complexe",
+        "checked_on": "2026-11-22"
+      }
+    ],
+    "related": [],
+    "status": "source_identifiee"
+  },
+  {
+    "id": "dar-jamai",
+    "name": "Dar Jamaï",
+    "aliases": [
+      "Dar Jamai",
+      "Musée de la musique"
+    ],
+    "interests": [
+      "architecture",
+      "musees",
+      "artisanat"
+    ],
+    "kind": "monument",
+    "facts": [
+      {
+        "text": "Dar Jamaï accueille le Musée national de la musique.",
+        "url": "https://fnm.ma/museums/37",
+        "passage": "Présentation du Musée national de la musique",
+        "checked_on": "2026-11-22"
+      }
+    ],
+    "related": [],
+    "status": "source_identifiee"
+  },
+  {
+    "id": "bab-el-khemis",
+    "name": "Bab El Khemis",
+    "aliases": [
+      "Bab Lakhmis",
+      "Bab Khémis"
+    ],
+    "interests": [
+      "architecture",
+      "histoire"
+    ],
+    "kind": "monument",
+    "facts": [
+      {
+        "text": "Le Conseil préfectoral identifie Bab El Khemis comme l’ancienne entrée principale du quartier des jardins et de l’ancien mellah.",
+        "url": "https://visit-meknes.com/fr/portfolio/bab-el-khemis/",
+        "passage": "Notice, premier paragraphe",
+        "checked_on": "2026-11-22"
+      }
+    ],
+    "related": [],
+    "status": "source_identifiee"
+  },
+  {
+    "id": "agdal",
+    "name": "Bassin Agdal",
+    "aliases": [
+      "Bassin de l’Agdal",
+      "Sahrij Souani"
+    ],
+    "interests": [
+      "histoire"
+    ],
+    "kind": "monument",
+    "facts": [
+      {
+        "text": "Le bassin Agdal, aussi appelé Sahrij Souani, est un réservoir de l’époque ismaïlienne situé à proximité des greniers.",
+        "url": "https://visit-meknes.com/fr/portfolio/sahrij-souani/",
+        "passage": "Notice, situation et fonction du bassin",
+        "checked_on": "2026-11-22"
+      }
+    ],
+    "related": [],
+    "status": "source_identifiee"
+  },
+  {
+    "id": "qara",
+    "name": "Prison Qara",
+    "aliases": [
+      "Habs Qara",
+      "Kara"
+    ],
+    "interests": [
+      "histoire"
+    ],
+    "kind": "monument",
+    "facts": [
+      {
+        "text": "Habs Qara est un ensemble souterrain de la kasbah ismaïlienne. Le Conseil préfectoral décrit trois salles à arcades et voûtes.",
+        "url": "https://visit-meknes.com/fr/portfolio/habs-qara/",
+        "passage": "Notice, localisation et description des salles",
+        "checked_on": "2026-11-22"
+      }
+    ],
+    "related": [],
+    "status": "source_identifiee",
+    "published_hours": {
+      "text": "10 h–17 h",
+      "url": "https://visit-meknes.com/fr/portfolio/habs-qara/",
+      "checked_on": "2026-11-22"
+    }
+  },
+  {
+    "id": "poterie",
+    "name": "Poterie",
+    "aliases": [
+      "Céramique",
+      "Terre cuite"
+    ],
+    "interests": [],
+    "kind": "artisanat",
+    "facts": [
+      {
+        "text": "La Maison de l’Artisan répertorie la poterie parmi les métiers présents dans la région Fès-Meknès.",
+        "url": "https://mda.gov.ma/fr/communaute-des-professionnels/mise-en-relation-2/region-fes-meknes/",
+        "passage": "Ligne Ensemble d’Artisanat de Fès",
+        "checked_on": "2026-11-22"
+      }
+    ],
+    "related": [],
+    "status": "source_identifiee"
+  },
+  {
+    "id": "tapis",
+    "name": "Tapis",
+    "aliases": [
+      "Tissage",
+      "Tapis marocain"
+    ],
+    "interests": [],
+    "kind": "artisanat",
+    "facts": [
+      {
+        "text": "L’Ensemble d’Artisanat de Fès répertorie le tapis et la teinture.",
+        "url": "https://mda.gov.ma/fr/communaute-des-professionnels/mise-en-relation-2/region-fes-meknes/",
+        "passage": "Ligne Ensemble d’Artisanat de Fès",
+        "checked_on": "2026-11-22"
+      }
+    ],
+    "related": [],
+    "status": "source_identifiee"
+  },
+  {
+    "id": "babouches",
+    "name": "Babouches",
+    "aliases": [
+      "Babouche",
+      "Baboucherie"
+    ],
+    "interests": [],
+    "kind": "artisanat",
+    "facts": [
+      {
+        "text": "La Maison de l’Artisan répertorie la baboucherie au Foundouk Sbitryine à Fès.",
+        "url": "https://mda.gov.ma/fr/communaute-des-professionnels/mise-en-relation-2/region-fes-meknes/",
+        "passage": "Ligne Foundouk Sbitryine",
+        "checked_on": "2026-11-22"
+      }
+    ],
+    "related": [],
+    "status": "source_identifiee"
+  },
+  {
+    "id": "zellige",
+    "name": "Zellige",
+    "aliases": [
+      "Zellij",
+      "Zellij marocain"
+    ],
+    "interests": [],
+    "kind": "artisanat",
+    "facts": [
+      {
+        "text": "Des décors en zellige sont documentés à Dar Jamaï, à Meknès.",
+        "url": "https://commons.wikimedia.org/wiki/Category:Zellij_in_Dar_Jamai,_Meknes",
+        "passage": "Photographies classées dans la catégorie dédiée à Dar Jamaï",
+        "checked_on": "2026-11-22"
+      }
+    ],
+    "related": [
+      "dar-jamai"
+    ],
+    "status": "source_identifiee"
+  }
+]

@@ -1,0 +1,15 @@
+.deps/
+.venv/
+__pycache__/
+.pytest_cache/
+node_modules/
+dist/
+.env
+artifacts/
+workspace-data/
+.env.*
+!.env.example
+tmp/
+output/
+*.pem
+*.key

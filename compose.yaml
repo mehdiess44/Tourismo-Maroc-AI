@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgis/postgis:17-3.5
+    environment:
+      POSTGRES_DB: tourismo
+      POSTGRES_USER: tourismo
+      POSTGRES_PASSWORD: ${TOURISMO_DB_PASSWORD:?Définir TOURISMO_DB_PASSWORD}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - tourismo-db:/var/lib/postgresql/data
+volumes:
+  tourismo-db:

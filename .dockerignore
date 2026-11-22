@@ -1,0 +1,12 @@
+.deps
+.venv
+**/__pycache__
+frontend/node_modules
+frontend/dist
+artifacts
+workspace-data
+tmp
+output
+.env
+.git
+.env.*
