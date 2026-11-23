@@ -1,0 +1,36 @@
+{
+  "image": "synthetic.jpg",
+  "total_requests": 20,
+  "successes": 20,
+  "latencies_seconds": [
+    0.014,
+    0.015,
+    0.017,
+    0.023,
+    0.028,
+    0.028,
+    0.028,
+    0.029,
+    0.029,
+    0.03,
+    0.03,
+    0.031,
+    0.033,
+    0.034,
+    0.034,
+    0.04,
+    0.04,
+    0.041,
+    0.095,
+    0.901
+  ],
+  "median_seconds": 0.03,
+  "max_seconds": 0.901,
+  "p95_seconds": 0.095,
+  "fastapi_pid": 10024,
+  "fastapi_rss_mib": 63.0,
+  "first_response": {
+    "status": "unavailable",
+    "candidates": []
+  }
+}

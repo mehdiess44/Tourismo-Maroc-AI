@@ -1,0 +1,22 @@
+{
+  "entity_id": "bab-mansour",
+  "calls": 10,
+  "http_successes": 10,
+  "median_seconds": 0.0581,
+  "max_seconds": 0.5827,
+  "latencies_ordered": [
+    0.5827,
+    0.0495,
+    0.0197,
+    0.0446,
+    0.0616,
+    0.0639,
+    0.0604,
+    0.0608,
+    0.051,
+    0.0557
+  ],
+  "entity_name": "Bab Mansour",
+  "first_fact": "La porte est connue sous le nom de Bab Mansour Laalej.",
+  "first_fact_url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/"
+}
