@@ -30,6 +30,21 @@ def wait_health(proc, port):
     raise RuntimeError("FastAPI n’a pas répondu à /health après le démarrage.")
 
 
+def stop_worker(proc):
+    if proc.poll() is None:
+        for child in psutil.Process(proc.pid).children(recursive=True):
+            try:
+                child.terminate()
+            except psutil.NoSuchProcess:
+                pass
+        proc.terminate()
+        try:
+            proc.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            proc.kill()
+            proc.wait()
+
+
 def measure(port, image_path):
     with socket.socket() as probe:
         probe.settimeout(0.5)
@@ -60,23 +75,14 @@ def measure(port, image_path):
                 raise RuntimeError("Les artefacts ne sont pas disponibles dans FastAPI.")
             cold = send_one(port, image, image_path.name)
             run["cold_recognition"] = cold
+            peak = getattr(psutil.Process(worker_pid).memory_info(), "peak_wset", None)
+            run["fastapi_peak_working_set_mib"] = round(peak / 1048576, 1) if peak is not None else None
             if trial == 3 and recognition_ok(cold):
                 warm = measure_warm(port, image, image_path.name, worker_pid)
         except RuntimeError as error:
             run["error"] = str(error)
         finally:
-            if proc.poll() is None:
-                for child in psutil.Process(proc.pid).children(recursive=True):
-                    try:
-                        child.terminate()
-                    except psutil.NoSuchProcess:
-                        pass
-                proc.terminate()
-                try:
-                    proc.wait(timeout=5)
-                except subprocess.TimeoutExpired:
-                    proc.kill()
-                    proc.wait()
+            stop_worker(proc)
 
     startups = [run["startup_seconds"] for run in runs if "startup_seconds" in run]
     cold_successes = [
@@ -101,6 +107,7 @@ def measure(port, image_path):
         "cold_successes": len(cold_successes),
         "median_cold_seconds": median(cold_successes) if len(cold_successes) == 3 else None,
         "warm": warm,
+        "postgis_used": True,  # /health calls catalog() with the required database URL.
     }
 
 

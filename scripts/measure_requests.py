@@ -42,7 +42,11 @@ def send_one(port, image_bytes, filename="photo.jpg"):
             return {"status_code": r.status, "body": resp, "elapsed_seconds": elapsed, "error": None}
     except urllib.error.HTTPError as error:
         elapsed = round(time.perf_counter() - t0, 3)
-        return {"status_code": error.code, "body": None, "elapsed_seconds": elapsed, "error": str(error)}
+        try:
+            body = json.load(error)
+        except ValueError:
+            body = None
+        return {"status_code": error.code, "body": body, "elapsed_seconds": elapsed, "error": str(error)}
     except (OSError, ValueError) as e:
         elapsed = round(time.perf_counter() - t0, 3)
         return {"status_code": None, "body": None, "elapsed_seconds": elapsed, "error": str(e)}
@@ -61,7 +65,7 @@ def recognition_ok(result):
 def measure_warm(port, image, filename, pid):
     measures = [send_one(port, image, filename) for _ in range(20)]
     elapsed = sorted(row["elapsed_seconds"] for row in measures)
-    memory = psutil.Process(pid).memory_info()
+    memory = psutil.Process(pid).memory_info() if pid is not None else None
     peak = getattr(memory, "peak_wset", None)
     return {
         "requests": measures,
@@ -72,7 +76,7 @@ def measure_warm(port, image, filename, pid):
         "max_seconds": elapsed[-1],
         "fastapi_pid": pid,
         "fastapi_peak_working_set_mib": round(peak / 1048576, 1) if peak is not None else None,
-        "fastapi_final_rss_mib": round(memory.rss / 1048576, 1),
+        "fastapi_final_rss_mib": round(memory.rss / 1048576, 1) if memory is not None else None,
     }
 
 
