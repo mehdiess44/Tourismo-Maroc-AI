@@ -1,0 +1,102 @@
+{
+  "utc_started": "2026-11-24T22:18:12.144303+00:00",
+  "git_commit": "d56ebd0450daaab45d3e197e06db539c206668bb",
+  "manifest_sha256": "470e3c824518a65c380a46f8dba4d75ae39058af8ecdeba62ebf498c89a7fa87",
+  "prepared_sha256": "776f66f3714ee56e682adbf68386d582db959cc764cfd5ec50f6948635a59129",
+  "photo_id": "commons-152724069",
+  "photo_partition": "validation",
+  "photo_sha256": "b72c679d9c5764c12e203a23efbfd6b0775f89c9dcb51dbdc6395daebd8d727a",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "logical_cpu_count": 16,
+  "physical_cpu_count": 8,
+  "system_ram_mib": 15681.06640625,
+  "python": "3.12.0",
+  "onnxruntime": "1.32.0",
+  "worker_count_per_model": 1,
+  "warm_requests_per_model": 20,
+  "port": 18005,
+  "backend": "tourismo.api:app",
+  "postgis": true,
+  "warmup_requests_per_model": 1,
+  "production_artifacts_unchanged": true,
+  "models": {
+    "clip": {
+      "launcher_pid": 22252,
+      "fastapi_pid": 29504,
+      "startup_seconds": 2.5158905999996932,
+      "health": {
+        "status": "ok",
+        "vision_configured": true,
+        "network_ready": true
+      },
+      "postgis_entity_http": 200,
+      "first_recognition": {
+        "status_code": 200,
+        "body": {
+          "status": "candidate",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.9155676364898682
+            },
+            {
+              "id": "heri-es-souani",
+              "score": 0.7880370616912842
+            }
+          ]
+        },
+        "elapsed_seconds": 1.114,
+        "error": null
+      },
+      "onnx_providers": [
+        "CPUExecutionProvider"
+      ],
+      "measure_file": "data\\lot-4\\b-clip-measure-v2.json",
+      "measure_sha256": "5656afe7b29f067df37e5656914dc42a9bad4e1c16d7a7e255333ccea1f2abab",
+      "worker_log": "data\\lot-4\\b-clip-worker-v2.log",
+      "http_successes": 20,
+      "usable_responses": 20,
+      "peak_working_set_mib": 222.7
+    },
+    "resnet50": {
+      "launcher_pid": 21636,
+      "fastapi_pid": 21216,
+      "startup_seconds": 2.464218699999037,
+      "health": {
+        "status": "ok",
+        "vision_configured": true,
+        "network_ready": true
+      },
+      "postgis_entity_http": 200,
+      "first_recognition": {
+        "status_code": 200,
+        "body": {
+          "status": "candidate",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 4.150321006774902
+            },
+            {
+              "id": "heri-es-souani",
+              "score": -3.7603402137756348
+            }
+          ]
+        },
+        "elapsed_seconds": 0.973,
+        "error": null
+      },
+      "onnx_providers": [
+        "CPUExecutionProvider"
+      ],
+      "measure_file": "data\\lot-4\\b-resnet50-measure-v2.json",
+      "measure_sha256": "dab05c04c38739c50753b8c572621ea852d6f624b1d553ed31d1153cd5345a9a",
+      "worker_log": "data\\lot-4\\b-resnet50-worker-v2.log",
+      "http_successes": 20,
+      "usable_responses": 20,
+      "peak_working_set_mib": 315.0
+    }
+  },
+  "utc_completed": "2026-11-24T22:18:31.885172+00:00"
+}

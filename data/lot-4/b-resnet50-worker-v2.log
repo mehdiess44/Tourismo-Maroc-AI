@@ -1,0 +1,28 @@
+INFO:     Started server process [21216]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:18005 (Press CTRL+C to quit)
+INFO:     127.0.0.1:64427 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64429 - "GET /lot4-worker-pid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64430 - "GET /entities/bab-mansour HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64432 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64435 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64437 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64439 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64441 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64443 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64445 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64447 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64449 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64451 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64454 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64456 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64458 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64460 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64462 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64464 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64466 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64468 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64472 - "POST /recognitions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64474 - "POST /recognitions HTTP/1.1" 200 OK

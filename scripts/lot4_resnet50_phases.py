@@ -1,10 +1,7 @@
-"""Lot 4 CPU ResNet-50: train, validate, then evaluate frozen test artifacts.
-
-The only provisional part is adapt_manifest(). Confirm its schema with member A
-before any definitive run. No command here is run automatically.
-"""
+"""Lot 4 CPU ResNet-50: train, validate, then evaluate frozen test artifacts."""
 
 import argparse
+import csv
 import json
 import math
 import random
@@ -27,19 +24,21 @@ PREPROCESSING = {
 }
 
 
-def adapt_manifest(document):
-    """Provisional adapter boundary; update only this function for A's schema.
-
-    Expects {"photos": [...], "class_decisions": [...]}. Photo fields match
-    scripts.compare_vision, with optional `file` relative to --images. Each
-    decision has `label`, `kind`, and boolean `admissible`. No decision is
-    inferred from counts or from a photo's presence.
-    """
-    if not isinstance(document, dict) or not isinstance(document.get("photos"), list) \
-            or not isinstance(document.get("class_decisions"), list):
-        raise ValueError("Manifest schema unconfirmed: adapt_manifest() needs photos and class_decisions")
-    rows = document["photos"]
-    decisions = document["class_decisions"]
+def adapt_manifest(document, decisions_path):
+    """Use the frozen photo list and the published, explicit class decisions."""
+    if not isinstance(document, list):
+        raise ValueError("Manifest schema incompatible: expected a JSON photo list")
+    rows = document
+    with decisions_path.open(encoding="utf-8-sig", newline="") as stream:
+        reader = csv.DictReader(stream, delimiter=";")
+        if not {"label", "kind", "decision"}.issubset(reader.fieldnames or []):
+            raise ValueError("Class decisions CSV lacks label, kind or decision")
+        decisions = []
+        for row in reader:
+            if row["decision"] not in {"Admise", "Non admissible à cette date"}:
+                raise ValueError(f"Unknown class decision: {row['label']}: {row['decision']}")
+            decisions.append({"label": row["label"], "kind": row["kind"],
+                              "admissible": row["decision"] == "Admise"})
     if not rows or not decisions:
         raise ValueError("Manifest photos and class decisions must be nonempty")
     return rows, decisions
@@ -51,7 +50,8 @@ def manifest_rows(path, expected_sha):
     actual_sha = sha256(path)
     if actual_sha.lower() != expected_sha.lower():
         raise ValueError(f"Manifest SHA-256 mismatch: {actual_sha}")
-    rows, decisions = adapt_manifest(json.loads(path.read_text(encoding="utf-8")))
+    rows, decisions = adapt_manifest(json.loads(path.read_text(encoding="utf-8")),
+                                     path.parent / "class-decisions.csv")
 
     decision_map = {}
     for decision in decisions:
@@ -152,7 +152,7 @@ def infer_rows(rows, images_dir, transform, session, labels, kinds, torch_model=
         if logits.shape != (1, len(labels)) or not np.isfinite(logits).all():
             raise ValueError(f"Invalid ONNX output: {row['id']}")
         first, score = candidate(row["kind"], logits[0], labels, kinds)
-        record = {"id": row["id"], "partition": row["partition"],
+        record = {"id": row["id"], "group": row["group"], "partition": row["partition"],
                   "kind": row["kind"], "expected": row.get("label"),
                   "onnx_top1": first, "onnx_score": score}
         if torch_model is not None:
@@ -170,7 +170,8 @@ def infer_rows(rows, images_dir, transform, session, labels, kinds, torch_model=
 
 
 def calibrate(records, kinds):
-    """Choose abstention thresholds only from validation ONNX logits."""
+    """Use the same validation macro-F1 and tie-breakers as compare_vision."""
+    from scripts.compare_vision import evaluate
     if not records or any(row["partition"] != "validation" for row in records):
         raise ValueError("Calibration accepts validation records only")
     by_kind = defaultdict(list)
@@ -183,11 +184,17 @@ def calibrate(records, kinds):
         group = by_kind[kind]
         if not group or not any(row["expected"] is None for row in group):
             raise ValueError(f"Validation requires unknowns for kind: {kind}")
-        candidates = {row["onnx_score"] for row in group}
-        candidates.add(max(candidates) + 1.0)
-        thresholds[kind] = max(candidates, key=lambda cutoff: (
-            sum((row["onnx_top1"] if row["onnx_score"] >= cutoff else None) == row["expected"]
-                for row in group), cutoff))
+        predicted = [dict(id=row["id"], group=row["group"], kind=kind,
+                          expected=row["expected"], candidate=row["onnx_top1"],
+                          score=row["onnx_score"]) for row in group]
+        labels = sorted(label for label, value in kinds.items() if value == kind) + [None]
+        candidates = {row["score"] for row in predicted}
+        candidates.add(math.nextafter(max(candidates), math.inf))
+        def quality(cutoff):
+            values = evaluate(predicted, cutoff, labels)
+            return values["macro_f1"], -values["unknown_accepted"], cutoff
+
+        thresholds[kind] = max(candidates, key=quality)
     return thresholds
 
 
@@ -265,7 +272,8 @@ def validate(args):
     head_path = args.artifacts / "resnet50-head.pt"
     calibrated_path = args.artifacts / "resnet50-calibrated.json"
     predictions_path = args.artifacts / "validation-predictions.json"
-    refuse_existing(calibrated_path, predictions_path)
+    metrics_path = args.artifacts / "resnet50-validation.json"
+    refuse_existing(calibrated_path, predictions_path, metrics_path)
     config = json.loads(trained_path.read_text(encoding="utf-8"))
     if config["weights"] != WEIGHTS.name or config["preprocessing"] != PREPROCESSING:
         raise ValueError("Trained preprocessing or weights mismatch")
@@ -291,13 +299,26 @@ def validate(args):
     for record in records:
         record["decision"] = (record["onnx_top1"]
                               if record["onnx_score"] >= thresholds[record["kind"]] else None)
+    from scripts.compare_vision import evaluate
+    metrics = {}
+    for kind in sorted(set(kinds.values())):
+        predicted = [dict(id=row["id"], group=row["group"], kind=kind,
+                          expected=row["expected"], candidate=row["onnx_top1"],
+                          score=row["onnx_score"]) for row in records if row["kind"] == kind]
+        labels = sorted(label for label, value in kinds.items() if value == kind) + [None]
+        metrics[kind] = evaluate(predicted, thresholds[kind], labels)
+        metrics[kind]["top1_known"] = (metrics[kind]["top1_correct"] /
+                                       metrics[kind]["known_total"])
     calibrated = dict(config, phase="calibrated_on_validation", thresholds=thresholds,
                       validation_count=len(records),
                       pytorch_onnx_top1_agreements=sum(row["top1_agrees"] for row in records),
                       max_abs_logit_difference=max(row["max_abs_logit_difference"] for row in records))
     predictions_path.write_text(json.dumps(records, ensure_ascii=False, indent=2) + "\n",
                                 encoding="utf-8")
+    metrics_path.write_text(json.dumps(metrics, ensure_ascii=False, indent=2) + "\n",
+                            encoding="utf-8")
     calibrated["validation_predictions_sha256"] = sha256(predictions_path)
+    calibrated["validation_metrics_sha256"] = sha256(metrics_path)
     calibrated_path.write_text(json.dumps(calibrated, ensure_ascii=False, indent=2) + "\n",
                                encoding="utf-8")
 

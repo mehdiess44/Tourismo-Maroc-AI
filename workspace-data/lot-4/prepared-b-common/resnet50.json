@@ -1,0 +1,32 @@
+{
+  "method": "resnet50",
+  "labels": [
+    "bab-mansour",
+    "heri-es-souani"
+  ],
+  "size": 224,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "thresholds": {
+    "monument": 1.9213628768920898
+  },
+  "export_validation": {
+    "max_logit_error": 1.1920928955078125e-05,
+    "count": 9,
+    "mismatches": []
+  },
+  "training": {
+    "weights": "IMAGENET1K_V2",
+    "seed": 42,
+    "epochs": 60,
+    "torch_version": "2.15.0+cpu"
+  }
+}

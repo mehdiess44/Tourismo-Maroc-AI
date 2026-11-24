@@ -1,0 +1,378 @@
+{
+  "requests": [
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.225,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.208,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.237,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.166,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.192,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.165,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.173,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.166,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.209,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.163,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.186,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.177,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.18,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.189,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.194,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.168,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.192,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.2,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.172,
+      "error": null
+    },
+    {
+      "status_code": 200,
+      "body": {
+        "status": "candidate",
+        "candidates": [
+          {
+            "id": "bab-mansour",
+            "score": 0.9155676364898682
+          },
+          {
+            "id": "heri-es-souani",
+            "score": 0.7880370616912842
+          }
+        ]
+      },
+      "elapsed_seconds": 0.181,
+      "error": null
+    }
+  ],
+  "http_successes": 20,
+  "biz_successes": 20,
+  "median_seconds": 0.1835,
+  "p95_seconds": 0.225,
+  "max_seconds": 0.237,
+  "fastapi_pid": 29504,
+  "fastapi_peak_working_set_mib": 222.7,
+  "fastapi_final_rss_mib": 206.2,
+  "model_sha256": "583fd1110a514667812fee7d684952aaf82a99b959760c8d7dca7e0ab9839299",
+  "config_sha256": "d7fa92bb991efed4f3f22325de02eabb7a49f65eb41531a2bf4438c6dacd1434",
+  "image_sha256": "b72c679d9c5764c12e203a23efbfd6b0775f89c9dcb51dbdc6395daebd8d727a",
+  "machine_sha256": "b5ca20833420bee3c57199d0cdecd7b0a4132741c47dd9e6da695e7d55531d7e",
+  "system": "Windows",
+  "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD"
+}

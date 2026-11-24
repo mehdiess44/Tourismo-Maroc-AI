@@ -80,6 +80,7 @@ def load_state():
 def health():
     state = load_state()
     return {"status": "ok", "model": state["mode"],
+            "worker_pid": os.getpid(),
             "providers": state["session"].get_providers(),
             "onnx_sha256": sha256(state["model_path"])}
 
@@ -166,23 +167,32 @@ def run_worker(mode, model_path, config_path, kinds, plan, port, log_path):
                        LOT4_BENCHMARK_KINDS=json.dumps(kinds))
     result = None
     with log_path.open("w", encoding="utf-8") as log:
+        startup_started = time.perf_counter()
         process = subprocess.Popen([sys.executable, "-m", "uvicorn", "scripts.lot4_benchmark:app",
                                     "--host", "127.0.0.1", "--port", str(port), "--workers", "1"],
                                    cwd=ROOT, env=environment, stdout=log,
                                    stderr=subprocess.STDOUT)
         try:
             health_result = wait_health(process, port)
+            startup_seconds = time.perf_counter() - startup_started
             if health_result["providers"] != ["CPUExecutionProvider"]:
                 raise RuntimeError("Worker did not use CPUExecutionProvider")
             warmup = request(port, plan[0][0], plan[0][1])
-            if warmup["status_code"] != 200:
-                raise RuntimeError(f"Warm-up failed: {warmup['error']}")
+            if warmup["status_code"] != 200 or not isinstance(warmup["body"], dict) \
+                    or warmup["body"].get("status") not in ("candidate", "uncertain") \
+                    or not warmup["body"].get("candidates"):
+                raise RuntimeError(f"First recognition failed: {warmup}")
             results = [request(port, row, content) for row, content in plan]
             latencies = sorted(result["seconds"] for result in results)
-            memory = psutil.Process(process.pid).memory_info()
+            worker_pid = health_result["worker_pid"]
+            memory = psutil.Process(worker_pid).memory_info()
             peak = getattr(memory, "peak_wset", None)
-            result = {"model": mode, "health": health_result, "pid": process.pid,
+            result = {"model": mode, "health": health_result,
+                      "launcher_pid": process.pid, "pid": worker_pid,
+                      "startup_seconds": startup_seconds,
+                      "first_recognition_seconds": warmup["seconds"],
                       "warmup": warmup, "requests": results,
+                      "warm_latencies_seconds": [item["seconds"] for item in results],
                       "http_successes": sum(item["status_code"] == 200 for item in results),
                       "usable_responses": sum(item["status_code"] == 200
                                               and isinstance(item["body"], dict)
@@ -240,10 +250,19 @@ def benchmark(args):
     samples = [(row, photo_path(row, args.images).read_bytes()) for row in selected]
     plan = [samples[index % len(samples)] for index in range(20)]
     report = {"scope": "validation_http_benchmark", "manifest_sha256": manifest_sha,
+              "git_commit": subprocess.check_output(["git", "rev-parse", "HEAD"],
+                                                    cwd=ROOT, text=True).strip(),
               "sample_ids": [row["id"] for row, _ in plan],
               "sample_sha256": [row["sha256"] for row, _ in plan],
               "worker_count": 1, "requests_per_model": 20, "port": args.port,
+              "server": "isolated FastAPI application, uvicorn single worker",
+              "inference_provider": "CPUExecutionProvider",
+              "intra_op_threads": 2, "inter_op_threads": 1,
+              "request_timeout_seconds": 35,
               "platform": platform.platform(), "processor": platform.processor(),
+              "physical_cpu_count": psutil.cpu_count(logical=False),
+              "logical_cpu_count": psutil.cpu_count(logical=True),
+              "system_ram_mib": psutil.virtual_memory().total / 1048576,
               "python": sys.version.split()[0], "onnxruntime": ort.__version__,
               "numpy": np.__version__, "psutil": psutil.__version__,
               "artifact_sha256": {"clip_onnx": sha256(args.clip_onnx),
