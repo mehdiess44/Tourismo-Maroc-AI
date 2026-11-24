@@ -1,0 +1,222 @@
+{
+  "utc_started": "2026-11-24T23:09:27.092437+00:00",
+  "git_commit": "cc96e8026237fa35eafbf97323ac6d9de44877b0",
+  "manifest_sha256": "470e3c824518a65c380a46f8dba4d75ae39058af8ecdeba62ebf498c89a7fa87",
+  "model_sha256": "583fd1110a514667812fee7d684952aaf82a99b959760c8d7dca7e0ab9839299",
+  "config_sha256": "d7fa92bb991efed4f3f22325de02eabb7a49f65eb41531a2bf4438c6dacd1434",
+  "archive": "workspace-data\\lot-4\\archive-vision-before-final-a-b126d4e",
+  "backend": "tourismo.api:app",
+  "postgis": true,
+  "worker_count": 1,
+  "python": "3.13.3",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "port": 18006,
+  "known_photo": {
+    "id": "commons-152724069",
+    "partition": "validation",
+    "sha256": "b72c679d9c5764c12e203a23efbfd6b0775f89c9dcb51dbdc6395daebd8d727a"
+  },
+  "unknown_photo": {
+    "id": "commons-49023822",
+    "partition": "test",
+    "sha256": "6396a49795d613559ed810a1e4705f7918d8f3ca79de5d9d04559b364d4faa85"
+  },
+  "thresholds": {
+    "monument": 0.8774516582489014
+  },
+  "errors": [],
+  "launcher_pid": 3804,
+  "health": {
+    "status_code": 200,
+    "body": {
+      "status": "ok",
+      "vision_configured": true,
+      "network_ready": true
+    },
+    "elapsed_seconds": 1.872328199999174,
+    "error": null
+  },
+  "worker_pid": 15096,
+  "onnx_providers": {
+    "status_code": 200,
+    "body": {
+      "providers": [
+        "CPUExecutionProvider"
+      ]
+    },
+    "elapsed_seconds": 0.8428700000076788,
+    "error": null
+  },
+  "invalid_file": {
+    "status_code": 422,
+    "body": {
+      "detail": "Impossible de lire cette photo."
+    },
+    "elapsed_seconds": 0.147,
+    "error": "HTTP Error 422: Unprocessable Content"
+  },
+  "known_recognition": {
+    "status_code": 200,
+    "body": {
+      "status": "candidate",
+      "candidates": [
+        {
+          "id": "bab-mansour",
+          "score": 0.9155676364898682
+        },
+        {
+          "id": "heri-es-souani",
+          "score": 0.7880370616912842
+        }
+      ]
+    },
+    "elapsed_seconds": 0.13,
+    "error": null
+  },
+  "returned_identifier": "bab-mansour",
+  "postgis_entity": {
+    "status_code": 200,
+    "body": {
+      "id": "bab-mansour",
+      "kind": "monument",
+      "name": "Bab Mansour",
+      "facts": [
+        {
+          "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+          "text": "La porte est connue sous le nom de Bab Mansour Laalej.",
+          "passage": "Titre et notice du monument",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+          "text": "La porte se trouve devant la place El Hédim.",
+          "passage": "Notice du monument, premier paragraphe",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+          "text": "Le Conseil préfectoral du tourisme date l’achèvement de la porte de 1732, sous Moulay Abdellah.",
+          "passage": "Notice du monument, premier paragraphe",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+          "text": "L’ouverture forme un arc brisé et la porte est ornée d’une mosaïque polychrome.",
+          "passage": "Description architecturale de la porte",
+          "checked_on": "2026-11-22"
+        }
+      ],
+      "status": "source_identifiee",
+      "aliases": [
+        "Bab Mansour Laalej",
+        "Bab el-Mansour"
+      ],
+      "related": [],
+      "interests": [
+        "architecture",
+        "histoire"
+      ]
+    },
+    "elapsed_seconds": 0.038376399999833666,
+    "error": null
+  },
+  "unknown_recognition": {
+    "status_code": 200,
+    "body": {
+      "status": "uncertain",
+      "candidates": [
+        {
+          "id": "bab-mansour",
+          "score": 0.8274084329605103
+        },
+        {
+          "id": "heri-es-souani",
+          "score": 0.764986515045166
+        }
+      ]
+    },
+    "elapsed_seconds": 0.104,
+    "error": null
+  },
+  "manual_search": {
+    "status_code": 200,
+    "body": [
+      {
+        "id": "bab-mansour",
+        "kind": "monument",
+        "name": "Bab Mansour",
+        "facts": [
+          {
+            "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+            "text": "La porte est connue sous le nom de Bab Mansour Laalej.",
+            "passage": "Titre et notice du monument",
+            "checked_on": "2026-11-22"
+          },
+          {
+            "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+            "text": "La porte se trouve devant la place El Hédim.",
+            "passage": "Notice du monument, premier paragraphe",
+            "checked_on": "2026-11-22"
+          },
+          {
+            "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+            "text": "Le Conseil préfectoral du tourisme date l’achèvement de la porte de 1732, sous Moulay Abdellah.",
+            "passage": "Notice du monument, premier paragraphe",
+            "checked_on": "2026-11-22"
+          },
+          {
+            "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+            "text": "L’ouverture forme un arc brisé et la porte est ornée d’une mosaïque polychrome.",
+            "passage": "Description architecturale de la porte",
+            "checked_on": "2026-11-22"
+          }
+        ],
+        "status": "source_identifiee",
+        "aliases": [
+          "Bab Mansour Laalej",
+          "Bab el-Mansour"
+        ],
+        "related": [],
+        "interests": [
+          "architecture",
+          "histoire"
+        ]
+      }
+    ],
+    "elapsed_seconds": 0.05213019999791868,
+    "error": null
+  },
+  "warmup": {
+    "status_code": 200,
+    "body": {
+      "status": "candidate",
+      "candidates": [
+        {
+          "id": "bab-mansour",
+          "score": 0.9155676364898682
+        },
+        {
+          "id": "heri-es-souani",
+          "score": 0.7880370616912842
+        }
+      ]
+    },
+    "elapsed_seconds": 0.11,
+    "error": null
+  },
+  "warm_file": "data\\lot-4\\a-clip-warm.json",
+  "warm_sha256": "01ff8f590937a8ce60979e8596381efa5fb10bcc9c1ef43b52e4aefe1216ee6d",
+  "warm_summary": {
+    "http_successes": 20,
+    "biz_successes": 20,
+    "median_seconds": 0.121,
+    "p95_seconds": 0.132,
+    "max_seconds": 0.172,
+    "fastapi_peak_working_set_mib": 226.0,
+    "fastapi_pid": 15096
+  },
+  "memory_limit_met": true,
+  "warm_latency_limit_met": true,
+  "utc_completed": "2026-11-24T23:09:33.966368+00:00"
+}

@@ -99,8 +99,28 @@ Le test gelé contient 10 photos de six groupes, dont neuf photos connues et une
 
 Le seuil CLIP de 0,87745 laisse en état `uncertain` les cinq photos de Bab Mansour et deux des quatre photos de Heri es-Souani, malgré un premier candidat correct. ResNet-50 s’abstient sur une photo de Bab Mansour. Cet écart signale que le seuil CLIP calibré sur cette petite validation se transfère mal au test. L’unique inconnue de chaque partition limite la portée du taux d’acceptation observé.
 
-CLIP reste la décision issue de la validation. Pour revoir le seuil ou la sélection à partir de ce constat, prévoir des groupes indépendants supplémentaires pour une nouvelle validation et un nouveau test. La recette du modèle retenu sur les deux PC reste à documenter.
+CLIP reste la décision issue de la validation. Pour revoir le seuil ou la sélection à partir de ce constat, prévoir des groupes indépendants supplémentaires pour une nouvelle validation et un nouveau test. La recette du modèle retenu figure ci-dessous.
 
 ## Recette sur les deux PC
 
-B installe le modèle choisi et A vérifie les mêmes empreintes et le même commit sur son PC. Vérifier une reconnaissance connue suivie de la lecture de la fiche avec l’identifiant renvoyé, une inconnue en état `uncertain` avec recherche manuelle accessible, puis HTTP 422 et récupération sur le fichier valide suivant. Enchaîner 20 requêtes à chaud et relever P95, maximum et pic mémoire. Sur A, comparer au lot 3 avec un P95 de 0,503 s, un maximum de 0,535 s et un pic de 215,9 Mio. Joindre le manifeste, les sorties de validation et de test, la décision, l’analyse d’erreurs et les preuves des deux PC.
+**Recette locale validée.** Les deux PC ont exécuté CLIP sur CPU avec la même galerie, le seuil gelé de 0,87745, les mêmes fichiers photo et un seul worker FastAPI connecté à PostGIS. B a testé `b126d4e` avec la configuration CLIP installée localement. Ses preuves sont publiées dans `9a7f218`. A a testé `cc96e80`, qui livre cette configuration dans le dépôt et ajoute le script de recette. Les fichiers du backend et le script de mesure sont identiques entre les deux révisions.
+
+| Contrôle | PC A | PC B |
+|---|---:|---:|
+| Fichier invalide puis photo valide | HTTP 422 puis HTTP 200 | HTTP 422 puis HTTP 200 |
+| Photo connue, premier candidat | `candidate`, Bab Mansour | `candidate`, Bab Mansour |
+| Fiche de l’identifiant renvoyé dans PostGIS | HTTP 200 | HTTP 200 |
+| Photo hors catalogue | `uncertain` | `uncertain` |
+| Recherche manuelle de Bab Mansour | HTTP 200, fiche présente | HTTP 200, fiche présente |
+| Requêtes à chaud exploitables | 20/20 | 20/20 |
+| Médiane à chaud | 0,121 s | 0,115 s |
+| P95 à chaud | 0,132 s | 0,143 s |
+| Maximum à chaud | 0,172 s | 0,152 s |
+| Pic mémoire du worker | 226,0 Mio | 223,1 Mio |
+
+Les deux PC respectent le plafond de 400 Mio et la limite de moins de 30 s par requête chaude. Sur le PC A, le P95 passe de 0,503 s au lot 3 à 0,132 s, et le pic mémoire de 215,9 Mio à 226,0 Mio. Les essais utilisent des photos et des galeries différentes. A a importé les 12 fiches dans une base PostGIS temporaire dédiée à cette recette.
+
+- PC A — [Recette HTTP et PostGIS](../data/lot-4/a-clip-recipe.json) · [Mesures à chaud](../data/lot-4/a-clip-warm.json)
+- PC B — [Recette HTTP et PostGIS](../data/lot-4/b-clip-recipe.json) · [Mesures à chaud](../data/lot-4/b-clip-warm.json)
+
+**Clôture du lot 4.** Le choix de CLIP est documenté, le test gelé est publié et la chaîne photo → candidat → fiche PostGIS a été reproduite sur les deux PC. Le test gelé reste la référence pour la limite d’abstention. CLIP n’a accepté que 2 photos connues sur 9 au seuil retenu.
