@@ -1,0 +1,82 @@
+{
+  "prototype_only": true,
+  "git_commit": "e1b8339ac133645a1fba6a0ce110ce1f1e9dd51d",
+  "seed": 42,
+  "python": "3.12.0",
+  "torch": "2.15.0+cpu",
+  "torchvision": "0.29.2+cpu",
+  "onnx": "1.23.2",
+  "onnxruntime": "1.32.0",
+  "weights": "IMAGENET1K_V2",
+  "weights_url": "https://download.pytorch.org/models/resnet50-11ad3fa6.pth",
+  "weights_sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+  "preprocessing": {
+    "source": "torchvision ResNet50_Weights.IMAGENET1K_V2.transforms()",
+    "resize": 232,
+    "center_crop": 224,
+    "interpolation": "bilinear",
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "color": "RGB",
+    "exif_transpose": true
+  },
+  "device": "cpu",
+  "onnx_providers": [
+    "CPUExecutionProvider"
+  ],
+  "onnx_opset": 17,
+  "onnx_path": "artifacts\\lot-4-prototype-resnet50-imagenet-v2.onnx",
+  "onnx_sha256": "85853f54bdf57c69fe2938c12761eb7d46507145734c17ed4e73767a91b12fab",
+  "comparisons": [
+    {
+      "image": "bab-mansour-2018.jpg",
+      "image_sha256": "bfface3852a2a976fd18d70d354a05dec5b75c17784d2e28d7fb6f3aedd91608",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "output_shape": [
+        1,
+        1000
+      ],
+      "pytorch_top1_imagenet_index": 668,
+      "onnx_top1_imagenet_index": 668,
+      "top1_agrees": true,
+      "max_abs_logit_difference": 3.337860107421875e-06,
+      "mean_abs_logit_difference": 3.914276476280065e-07,
+      "pytorch_finite": true,
+      "onnx_finite": true
+    },
+    {
+      "image": "zellige-meknes.jpg",
+      "image_sha256": "8ea444365e30d463d633e2dad38fc0575b1eff160b558bdfb835c25e31e41b7b",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "output_shape": [
+        1,
+        1000
+      ],
+      "pytorch_top1_imagenet_index": 857,
+      "onnx_top1_imagenet_index": 857,
+      "top1_agrees": true,
+      "max_abs_logit_difference": 9.655952453613281e-06,
+      "mean_abs_logit_difference": 1.3448715208141948e-06,
+      "pytorch_finite": true,
+      "onnx_finite": true
+    }
+  ]
+}
