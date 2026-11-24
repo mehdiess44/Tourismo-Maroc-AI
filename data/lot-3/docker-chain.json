@@ -1,0 +1,373 @@
+{
+  "technical_success": true,
+  "image_name": "bab-mansour-2018.jpg",
+  "onnx_sha256": "583fd1110a514667812fee7d684952aaf82a99b959760c8d7dca7e0ab9839299",
+  "json_sha256": "5dd6757ce432db8d8e6cea13e8adc285496b3c8c8766ddd409ddb41ed7d8ba65",
+  "image_sha256": "bfface3852a2a976fd18d70d354a05dec5b75c17784d2e28d7fb6f3aedd91608",
+  "health": {
+    "status": "ok",
+    "vision_configured": true,
+    "network_ready": true
+  },
+  "invalid_file_test": {
+    "status_code": 422,
+    "body": {
+      "detail": "Impossible de lire cette photo."
+    },
+    "elapsed_seconds": 0.103,
+    "error": "HTTP Error 422: Unprocessable Content"
+  },
+  "first_recognition": {
+    "status_code": 200,
+    "body": {
+      "status": "uncertain",
+      "candidates": [
+        {
+          "id": "bab-mansour",
+          "score": 0.7578490376472473
+        }
+      ]
+    },
+    "elapsed_seconds": 0.901,
+    "error": null
+  },
+  "bab_mansour_rank": 1,
+  "top_entity_read": {
+    "status_code": 200,
+    "requested_id": "bab-mansour",
+    "entity": {
+      "id": "bab-mansour",
+      "kind": "monument",
+      "name": "Bab Mansour",
+      "facts": [
+        {
+          "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+          "text": "La porte est connue sous le nom de Bab Mansour Laalej.",
+          "passage": "Titre et notice du monument",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+          "text": "La porte se trouve devant la place El Hédim.",
+          "passage": "Notice du monument, premier paragraphe",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+          "text": "Le Conseil préfectoral du tourisme date l’achèvement de la porte de 1732, sous Moulay Abdellah.",
+          "passage": "Notice du monument, premier paragraphe",
+          "checked_on": "2026-11-22"
+        },
+        {
+          "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+          "text": "L’ouverture forme un arc brisé et la porte est ornée d’une mosaïque polychrome.",
+          "passage": "Description architecturale de la porte",
+          "checked_on": "2026-11-22"
+        }
+      ],
+      "status": "source_identifiee",
+      "aliases": [
+        "Bab Mansour Laalej",
+        "Bab el-Mansour"
+      ],
+      "related": [],
+      "interests": [
+        "architecture",
+        "histoire"
+      ]
+    },
+    "elapsed_seconds": 0.02348800000618212
+  },
+  "warm": {
+    "requests": [
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.131,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.141,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.105,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.098,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.121,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.121,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.117,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.13,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.121,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.108,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.134,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.126,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.137,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.107,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.121,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.12,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.111,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.125,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.121,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.118,
+        "error": null
+      }
+    ],
+    "http_successes": 20,
+    "biz_successes": 20,
+    "median_seconds": 0.121,
+    "p95_seconds": 0.137,
+    "max_seconds": 0.141,
+    "fastapi_pid": null,
+    "fastapi_peak_working_set_mib": null,
+    "fastapi_final_rss_mib": null
+  }
+}

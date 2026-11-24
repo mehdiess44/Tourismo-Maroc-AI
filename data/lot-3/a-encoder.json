@@ -1,0 +1,10 @@
+{
+  "input": "bab-mansour-2018.jpg",
+  "load_seconds": 0.46,
+  "first_inference_seconds": 0.077,
+  "shape": [
+    1,
+    512
+  ],
+  "peak_working_set_mib": 168.8
+}
