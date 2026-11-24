@@ -57,7 +57,7 @@ $prepared = 'workspace-data/lot-4/prepared'
 
 A a exécuté cette commande avec `--clip-only` et le dossier `workspace-data/lot-4/clip-prepared`. La galerie contient 26 références. Sur les neuf photos de validation, CLIP classe correctement les huit photos connues avant seuil. Après abstention, la macro-F1 vaut 0,8413 et l’unique inconnue est rejetée. Quatre photos de Heri es-Souani proviennent d’un seul groupe de validation. L’effectif d’inconnues reste d’une photo par partition. [Prédictions CLIP de validation](../data/lot-4/clip-validation.json)
 
-B utilise `--clip-prepared workspace-data/lot-4/clip-prepared` avec la commande de préparation complète et un autre dossier de sortie pour reprendre exactement la galerie et les seuils de A. La sélection et le test comparatif utilisent cette préparation complète. Les mesures ResNet-50 et les mesures HTTP comparables sur B restent à produire avant le choix et le test.
+B utilise `--clip-prepared workspace-data/lot-4/clip-prepared` avec la commande de préparation complète et un autre dossier de sortie pour reprendre exactement la galerie et les seuils de A. La sélection et le test comparatif utilisent cette préparation complète. Les mesures officielles du PC B et la décision figurent dans les résultats ci-dessous.
 
 Pour comparer sur le PC B, archiver le pilote, puis installer un modèle préparé à la fois sous les noms `vision.onnx` et `vision.json`. Démarrer FastAPI avec PostGIS et un seul worker, relever le PID du worker et envoyer une première requête valide. Sur ce même worker, mesurer les 20 requêtes à chaud. Refaire sur le même PC avec le second modèle et la même photo **de validation**. Remplacer la valeur de `$workerPid` à chaque démarrage. Copier les deux sorties brutes à A.
 
@@ -73,6 +73,33 @@ Le choix compare les deux pics mémoire et les maximums à chaud, puis la macro-
 ```
 
 Le test recharge les artefacts contrôlés par empreinte. Comparer les effectifs, le Top-1 sur les connus, la macro-F1 après abstention, les inconnues acceptées, la matrice et les mesures HTTP de chaque type. Examiner les erreurs à partir des identifiants. Indiquer « non évalué » pour chaque type absent et signaler toute évaluation à classe unique.
+
+## Décision et résultats du test final
+
+Le choix a été enregistré le 24 novembre 2026 à 22 h 30 UTC avec les fichiers du commit `415a5dd`, avant l’inférence sur les 10 photos du test. Les deux modèles satisfont les limites CPU sur le même PC B avec PostGIS, un worker FastAPI et 20 requêtes exploitables par modèle. Le protocole retient **CLIP** pour sa meilleure macro-F1 après abstention sur la validation.
+
+| Mesure de validation et de ressources | CLIP | ResNet-50 |
+|---|---:|---:|
+| Macro-F1 après abstention | 0,8413 | 0,6296 |
+| Inconnues acceptées | 0/1 | 1/1 |
+| P95 à chaud | 0,225 s | 0,227 s |
+| Maximum à chaud | 0,237 s | 0,250 s |
+| Pic mémoire du worker | 222,7 Mio | 315,0 Mio |
+
+[Choix horodaté et empreintes](../data/lot-4/model-decision.json) · [Mesures du PC B](../data/lot-4/b-official-benchmark-summary.md)
+
+Le test gelé contient 10 photos de six groupes, dont neuf photos connues et une hors catalogue. Les deux modèles ont été évalués avec les artefacts et les seuils figés. Les matrices de confusion et les prédictions par photo figurent dans le JSON. [Résultats bruts du test](../data/lot-4/final-test-results.json)
+
+| Mesure sur le test gelé | CLIP | ResNet-50 |
+|---|---:|---:|
+| Premier candidat correct avant seuil, photos connues | 9/9 | 9/9 |
+| Photos connues correctement acceptées après seuil | 2/9 | 8/9 |
+| Macro-F1 après abstention | 0,2963 | 0,8519 |
+| Inconnues acceptées | 0/1 | 0/1 |
+
+Le seuil CLIP de 0,87745 laisse en état `uncertain` les cinq photos de Bab Mansour et deux des quatre photos de Heri es-Souani, malgré un premier candidat correct. ResNet-50 s’abstient sur une photo de Bab Mansour. Cet écart signale que le seuil CLIP calibré sur cette petite validation se transfère mal au test. L’unique inconnue de chaque partition limite la portée du taux d’acceptation observé.
+
+CLIP reste la décision issue de la validation. Pour revoir le seuil ou la sélection à partir de ce constat, prévoir des groupes indépendants supplémentaires pour une nouvelle validation et un nouveau test. La recette du modèle retenu sur les deux PC reste à documenter.
 
 ## Recette sur les deux PC
 

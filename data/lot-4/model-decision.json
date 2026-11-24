@@ -1,0 +1,25 @@
+{
+  "selected": "clip",
+  "utc": "2026-11-24T22:30:09.433393+00:00",
+  "models": {
+    "clip": {
+      "eligible": true,
+      "macro_f1": 0.8412698412698413,
+      "unknown_rate": 0.0,
+      "p95_seconds": 0.225,
+      "max_seconds": 0.237,
+      "peak_mib": 222.7,
+      "measures_sha256": "5656afe7b29f067df37e5656914dc42a9bad4e1c16d7a7e255333ccea1f2abab"
+    },
+    "resnet50": {
+      "eligible": true,
+      "macro_f1": 0.6296296296296297,
+      "unknown_rate": 1.0,
+      "p95_seconds": 0.227,
+      "max_seconds": 0.25,
+      "peak_mib": 315.0,
+      "measures_sha256": "dab05c04c38739c50753b8c572621ea852d6f624b1d553ed31d1153cd5345a9a"
+    }
+  },
+  "prepared_sha256": "776f66f3714ee56e682adbf68386d582db959cc764cfd5ec50f6948635a59129"
+}
