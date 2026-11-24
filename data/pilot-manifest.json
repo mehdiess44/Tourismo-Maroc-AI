@@ -1,0 +1,46 @@
+[
+  {
+    "id": "bab-mansour-2007",
+    "label": "bab-mansour",
+    "file": "Bab_Mansour_in_Meknes_2007.jpg",
+    "author": "Radosław Botev",
+    "license": "https://creativecommons.org/licenses/by/3.0/pl/",
+    "source": "https://commons.wikimedia.org/wiki/File:Bab_Mansour_in_Meknes_2007.jpg",
+    "group": "botev-2007",
+    "role": "reference",
+    "sha256": "80f9dfac330bdd7799ab3f449f202fd59f36c5c64d7bf9f14d8d1178bffe5753"
+  },
+  {
+    "id": "bab-mansour-2018",
+    "label": "bab-mansour",
+    "file": "Bab_Mansour_Meknes_2018_1.jpg",
+    "author": "Steven Lek",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Bab_Mansour_Meknes_2018_1.jpg",
+    "group": "lek-2018",
+    "role": "smoke",
+    "sha256": "bfface3852a2a976fd18d70d354a05dec5b75c17784d2e28d7fb6f3aedd91608"
+  },
+  {
+    "id": "zellige-dar-jamai",
+    "label": "zellige",
+    "file": "Dar_jamai_DSCF5529.jpg",
+    "author": "Robert Prazeres",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Dar_jamai_DSCF5529.jpg",
+    "group": "prazeres-2015",
+    "role": "reference",
+    "sha256": "312526e5d3275bf4d420026455c20b54e5f231cdf0efa1f7cd6d3abfc53c67e6"
+  },
+  {
+    "id": "zellige-meknes",
+    "label": "zellige",
+    "file": "Meknes_DSC03660_Morocco_(15276103936).jpg",
+    "author": "Ian Cochrane",
+    "license": "https://creativecommons.org/licenses/by/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Meknes_DSC03660_Morocco_(15276103936).jpg",
+    "group": "cochrane-2014",
+    "role": "smoke",
+    "sha256": "8ea444365e30d463d633e2dad38fc0575b1eff160b558bdfb835c25e31e41b7b"
+  }
+]
