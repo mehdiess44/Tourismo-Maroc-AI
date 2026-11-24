@@ -1,0 +1,20 @@
+{
+  "runs": [
+    {
+      "run": 1,
+      "startup_seconds": 3.325,
+      "pid": 33360
+    },
+    {
+      "run": 2,
+      "startup_seconds": 2.161,
+      "pid": 37164
+    },
+    {
+      "run": 3,
+      "startup_seconds": 2.197,
+      "pid": 18756
+    }
+  ],
+  "median_startup_seconds": 2.197
+}

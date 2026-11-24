@@ -1,0 +1,14 @@
+{
+  "image_id": "sha256:5f32f431b2c658c1e79e870ed888653decf2fa4e6bebf4a5554501334199cf5d",
+  "image_sha256": [
+    "583fd1110a514667812fee7d684952aaf82a99b959760c8d7dca7e0ab9839299  artifacts/vision.onnx",
+    "5dd6757ce432db8d8e6cea13e8adc285496b3c8c8766ddd409ddb41ed7d8ba65  artifacts/vision.json"
+  ],
+  "memory_method": "cgroup v2 memory.peak",
+  "memory_peak_bytes": 289730560,
+  "memory_peak_mib": 276.31,
+  "memory_limit_bytes": 536870912,
+  "oom_killed": false,
+  "state": "running",
+  "postgis_network_alias": "db"
+}

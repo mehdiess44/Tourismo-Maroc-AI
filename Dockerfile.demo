@@ -1,0 +1,31 @@
+# Dockerfile de démonstration – Lot 3 Faisabilité CPU
+# Inclut explicitement vision.onnx et vision.json dans l'image.
+# Utiliser avec : docker build -f Dockerfile.demo -t tourismo-demo .
+# (nécessite vision.onnx et vision.json dans artifacts/ au moment du build)
+
+FROM node:22-slim AS web
+WORKDIR /source/frontend
+COPY frontend/package*.json ./
+RUN npm ci
+COPY frontend/ ./
+RUN npm run build
+
+FROM python:3.13-slim
+WORKDIR /app
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+COPY tourismo ./tourismo
+COPY data ./data
+COPY --from=web /source/frontend/dist ./frontend/dist
+
+# Copie explicite des artefacts du modèle (exclus du .dockerignore principal)
+# vision.json et vision.onnx doivent être présents dans artifacts/ à la racine
+COPY artifacts/vision.json ./artifacts/vision.json
+COPY artifacts/vision.onnx ./artifacts/vision.onnx
+
+# Vérification d'empreinte à la construction (sha256sum disponible dans slim)
+RUN sha256sum artifacts/vision.onnx artifacts/vision.json
+
+ENV PORT=8000
+# TOURISMO_DATABASE_URL doit être injecté à l'exécution par --env ou -e
+CMD ["sh", "-c", "exec uvicorn tourismo.api:app --host 0.0.0.0 --port ${PORT} --workers 1"]

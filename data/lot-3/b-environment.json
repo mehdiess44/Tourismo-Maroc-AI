@@ -1,0 +1,70 @@
+{
+  "commit": "24ac5f4b553b89c4c119a3151fb1d88805794d60",
+  "utc": "2026-11-24T20:48:11.034203+00:00",
+  "system": "Microsoft Windows 11 Pro",
+  "cpu": "AMD Ryzen 7 PRO 5850U",
+  "ram_gib": 15.31,
+  "python": "Python 3.12.0",
+  "dependencies": [
+    {
+      "name": "fastapi",
+      "version": "0.165.0"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.5"
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.32.0"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0"
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2"
+    },
+    {
+      "name": "psycopg",
+      "version": "3.3.9"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.54.0"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.34"
+    },
+    {
+      "name": "ortools",
+      "version": "9.15.6755"
+    },
+    {
+      "name": "streamlit",
+      "version": "1.67.0"
+    },
+    {
+      "name": "pytest",
+      "version": "9.2.0"
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2"
+    }
+  ],
+  "postgis": [
+    "3.5 USE_GEOS=1 USE_PROJ=1 USE_STATS=1",
+    "bab-mansour|4326|POINT(-5.564607 33.8928645)"
+  ],
+  "import_counts": [
+    12,
+    12
+  ]
+}

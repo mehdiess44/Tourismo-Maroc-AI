@@ -1,0 +1,143 @@
+{
+  "commit": "24ac5f4b553b89c4c119a3151fb1d88805794d60",
+  "port": 18002,
+  "db_service": "db",
+  "db_container": "tourismo-maroc-ai-db-1",
+  "database_source": "PostGIS",
+  "python_connection": {
+    "ok": true,
+    "entity_id": "bab-mansour",
+    "entity_name": "Bab Mansour"
+  },
+  "fastapi": {
+    "pid": 28244,
+    "create_time_epoch": 1795552628.5103028,
+    "same_process": true,
+    "stopped_after_test": true
+  },
+  "steps": {
+    "health": {
+      "status_code": 200,
+      "latency_seconds": 1.8972,
+      "body": {
+        "status": "ok",
+        "vision_configured": true,
+        "network_ready": true
+      }
+    },
+    "entity_db_up": {
+      "status_code": 200,
+      "latency_seconds": 0.0479,
+      "body": {
+        "id": "bab-mansour",
+        "kind": "monument",
+        "name": "Bab Mansour",
+        "facts": [
+          {
+            "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+            "text": "La porte est connue sous le nom de Bab Mansour Laalej.",
+            "passage": "Titre et notice du monument",
+            "checked_on": "2026-11-22"
+          },
+          {
+            "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+            "text": "La porte se trouve devant la place El Hédim.",
+            "passage": "Notice du monument, premier paragraphe",
+            "checked_on": "2026-11-22"
+          },
+          {
+            "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+            "text": "Le Conseil préfectoral du tourisme date l’achèvement de la porte de 1732, sous Moulay Abdellah.",
+            "passage": "Notice du monument, premier paragraphe",
+            "checked_on": "2026-11-22"
+          },
+          {
+            "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+            "text": "L’ouverture forme un arc brisé et la porte est ornée d’une mosaïque polychrome.",
+            "passage": "Description architecturale de la porte",
+            "checked_on": "2026-11-22"
+          }
+        ],
+        "status": "source_identifiee",
+        "aliases": [
+          "Bab Mansour Laalej",
+          "Bab el-Mansour"
+        ],
+        "related": [],
+        "interests": [
+          "architecture",
+          "histoire"
+        ]
+      },
+      "fastapi_process": {
+        "pid": 28244,
+        "create_time_epoch": 1795552628.5103028
+      }
+    },
+    "db_stop_output": "",
+    "entity_db_down": {
+      "status_code": null,
+      "latency_seconds": 5.0164,
+      "error": "TimeoutError: timed out",
+      "fastapi_process": {
+        "pid": 28244,
+        "create_time_epoch": 1795552628.5103028
+      }
+    },
+    "db_start_output": "",
+    "pg_isready": "/var/run/postgresql:5432 - accepting connections",
+    "entity_db_restored": {
+      "status_code": 200,
+      "latency_seconds": 0.0821,
+      "body": {
+        "id": "bab-mansour",
+        "kind": "monument",
+        "name": "Bab Mansour",
+        "facts": [
+          {
+            "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+            "text": "La porte est connue sous le nom de Bab Mansour Laalej.",
+            "passage": "Titre et notice du monument",
+            "checked_on": "2026-11-22"
+          },
+          {
+            "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+            "text": "La porte se trouve devant la place El Hédim.",
+            "passage": "Notice du monument, premier paragraphe",
+            "checked_on": "2026-11-22"
+          },
+          {
+            "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+            "text": "Le Conseil préfectoral du tourisme date l’achèvement de la porte de 1732, sous Moulay Abdellah.",
+            "passage": "Notice du monument, premier paragraphe",
+            "checked_on": "2026-11-22"
+          },
+          {
+            "url": "https://visit-meknes.com/fr/portfolio/bab-mansour-laalej-2/",
+            "text": "L’ouverture forme un arc brisé et la porte est ornée d’une mosaïque polychrome.",
+            "passage": "Description architecturale de la porte",
+            "checked_on": "2026-11-22"
+          }
+        ],
+        "status": "source_identifiee",
+        "aliases": [
+          "Bab Mansour Laalej",
+          "Bab el-Mansour"
+        ],
+        "related": [],
+        "interests": [
+          "architecture",
+          "histoire"
+        ]
+      },
+      "fastapi_process": {
+        "pid": 28244,
+        "create_time_epoch": 1795552628.5103028
+      }
+    }
+  },
+  "validated": true,
+  "errors": [],
+  "db_container_id_before": "7e8ffc99cad5f1781991b45dd09ef7e01ad3305ee89b34895a2e36a35c9c326b",
+  "db_container_id_after": "7e8ffc99cad5f1781991b45dd09ef7e01ad3305ee89b34895a2e36a35c9c326b"
+}

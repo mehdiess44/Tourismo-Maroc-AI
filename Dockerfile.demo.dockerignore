@@ -1,0 +1,26 @@
+# .dockerignore spécifique à Dockerfile.demo
+# Exclut tout ce qui n'est pas nécessaire au build de démonstration,
+# MAIS rend accessibles vision.onnx et vision.json (contrairement au .dockerignore principal).
+
+# Dépendances locales
+.deps
+.venv
+**/__pycache__
+frontend/node_modules
+
+# Artefacts de test et temporaires
+tmp
+output
+workspace-data
+.env
+.env.*
+.git
+.pytest_cache
+
+# Exclure les artefacts en général SAUF les deux fichiers du modèle
+artifacts/*
+!artifacts/vision.onnx
+!artifacts/vision.json
+
+# Données utilisateur non publiables
+Dataset_Images_Tourismo.xlsx
