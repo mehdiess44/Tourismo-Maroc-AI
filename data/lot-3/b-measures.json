@@ -1,0 +1,386 @@
+{
+  "image": "bab-mansour-2018.jpg",
+  "image_sha256": "bfface3852a2a976fd18d70d354a05dec5b75c17784d2e28d7fb6f3aedd91608",
+  "image_dimensions": [
+    960,
+    636
+  ],
+  "reference_count": 2,
+  "artifact_sha256": {
+    "vision.onnx": "583fd1110a514667812fee7d684952aaf82a99b959760c8d7dca7e0ab9839299",
+    "vision.json": "5dd6757ce432db8d8e6cea13e8adc285496b3c8c8766ddd409ddb41ed7d8ba65"
+  },
+  "runs": [
+    {
+      "run": 1,
+      "pid": 27704,
+      "health": {
+        "status": "ok",
+        "vision_configured": true,
+        "network_ready": true
+      },
+      "startup_seconds": 2.5341473999978916,
+      "cold_recognition": {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 1.164,
+        "error": null
+      },
+      "fastapi_peak_working_set_mib": 208.8
+    },
+    {
+      "run": 2,
+      "pid": 22996,
+      "health": {
+        "status": "ok",
+        "vision_configured": true,
+        "network_ready": true
+      },
+      "startup_seconds": 2.438870300000417,
+      "cold_recognition": {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 1.055,
+        "error": null
+      },
+      "fastapi_peak_working_set_mib": 208.8
+    },
+    {
+      "run": 3,
+      "pid": 24988,
+      "health": {
+        "status": "ok",
+        "vision_configured": true,
+        "network_ready": true
+      },
+      "startup_seconds": 2.426794000002701,
+      "cold_recognition": {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 1.037,
+        "error": null
+      },
+      "fastapi_peak_working_set_mib": 210.3
+    }
+  ],
+  "median_startup_seconds": 2.438870300000417,
+  "cold_successes": 3,
+  "median_cold_seconds": 1.055,
+  "warm": {
+    "requests": [
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.155,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.138,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.14,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.143,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.178,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.151,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.148,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.139,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.129,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.151,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.136,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.139,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.143,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.2,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.166,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.153,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.173,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.145,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.153,
+        "error": null
+      },
+      {
+        "status_code": 200,
+        "body": {
+          "status": "uncertain",
+          "candidates": [
+            {
+              "id": "bab-mansour",
+              "score": 0.7578490376472473
+            }
+          ]
+        },
+        "elapsed_seconds": 0.168,
+        "error": null
+      }
+    ],
+    "http_successes": 20,
+    "biz_successes": 20,
+    "median_seconds": 0.1495,
+    "p95_seconds": 0.178,
+    "max_seconds": 0.2,
+    "fastapi_pid": 24988,
+    "fastapi_peak_working_set_mib": 211.9,
+    "fastapi_final_rss_mib": 204.9
+  },
+  "postgis_used": true
+}
