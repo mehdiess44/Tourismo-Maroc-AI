@@ -1,0 +1,135 @@
+{
+  "monument": {
+    "count": 9,
+    "groups": 4,
+    "known_total": 8,
+    "top1_correct": 8,
+    "macro_f1": 0.8412698412698413,
+    "unknown_total": 1,
+    "unknown_accepted": 0,
+    "labels": [
+      "bab-mansour",
+      "heri-es-souani",
+      null
+    ],
+    "confusion": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "predictions": [
+      {
+        "id": "commons-152724069",
+        "group": "commons-author-imtkkan",
+        "kind": "monument",
+        "expected": "bab-mansour",
+        "candidate": "bab-mansour",
+        "score": 0.9155676364898682,
+        "threshold": 0.8774516582489014,
+        "prediction": "bab-mansour",
+        "status": "candidate"
+      },
+      {
+        "id": "commons-22910495",
+        "group": "commons-author-chrismartinfromdecaturgeorgiausa",
+        "kind": "monument",
+        "expected": "bab-mansour",
+        "candidate": "bab-mansour",
+        "score": 0.8796781301498413,
+        "threshold": 0.8774516582489014,
+        "prediction": "bab-mansour",
+        "status": "candidate"
+      },
+      {
+        "id": "commons-72641430",
+        "group": "commons-author-bilalsucced",
+        "kind": "monument",
+        "expected": "bab-mansour",
+        "candidate": "bab-mansour",
+        "score": 0.8774516582489014,
+        "threshold": 0.8774516582489014,
+        "prediction": "bab-mansour",
+        "status": "candidate"
+      },
+      {
+        "id": "commons-92840527",
+        "group": "prazeres-2015",
+        "kind": "monument",
+        "expected": "bab-mansour",
+        "candidate": "bab-mansour",
+        "score": 0.9262385368347168,
+        "threshold": 0.8774516582489014,
+        "prediction": "bab-mansour",
+        "status": "candidate"
+      },
+      {
+        "id": "commons-92840564",
+        "group": "prazeres-2015",
+        "kind": "monument",
+        "expected": null,
+        "candidate": "bab-mansour",
+        "score": 0.873970627784729,
+        "threshold": 0.8774516582489014,
+        "prediction": null,
+        "status": "uncertain"
+      },
+      {
+        "id": "commons-92861708",
+        "group": "prazeres-2015",
+        "kind": "monument",
+        "expected": "heri-es-souani",
+        "candidate": "heri-es-souani",
+        "score": 0.9452266693115234,
+        "threshold": 0.8774516582489014,
+        "prediction": "heri-es-souani",
+        "status": "candidate"
+      },
+      {
+        "id": "commons-92861709",
+        "group": "prazeres-2015",
+        "kind": "monument",
+        "expected": "heri-es-souani",
+        "candidate": "heri-es-souani",
+        "score": 0.8107377290725708,
+        "threshold": 0.8774516582489014,
+        "prediction": null,
+        "status": "uncertain"
+      },
+      {
+        "id": "commons-92861710",
+        "group": "prazeres-2015",
+        "kind": "monument",
+        "expected": "heri-es-souani",
+        "candidate": "heri-es-souani",
+        "score": 0.8968198895454407,
+        "threshold": 0.8774516582489014,
+        "prediction": "heri-es-souani",
+        "status": "candidate"
+      },
+      {
+        "id": "commons-92861711",
+        "group": "prazeres-2015",
+        "kind": "monument",
+        "expected": "heri-es-souani",
+        "candidate": "heri-es-souani",
+        "score": 0.924626350402832,
+        "threshold": 0.8774516582489014,
+        "prediction": "heri-es-souani",
+        "status": "candidate"
+      }
+    ],
+    "top1_known": 1.0
+  }
+}
