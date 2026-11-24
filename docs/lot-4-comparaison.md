@@ -36,7 +36,15 @@ $images = 'workspace-data/lot-4/images'
 & $python -m scripts.compare_vision check $manifest $images
 ```
 
-Le contrôle lit et valide les fichiers des trois partitions, sans inférence. Conserver sa sortie avec le commit et la date. Transmettre les JPEG autorisés, le manifeste et son SHA-256 à B pour validation sur son PC. Pour les quatre photos du pilote éventuellement réutilisées, copier leurs versions depuis `workspace-data/images` et vérifier leurs empreintes.
+Le contrôle vérifie les JPEG et les empreintes des trois partitions. Conserver sa sortie avec le commit et la date.
+
+Pour récupérer la remise depuis un clone sur `main`, lancer `git pull --ff-only origin main`, puis `git lfs pull`. Les 45 JPEG, le manifeste et la configuration CLIP sont suivis par Git. Après le téléchargement du modèle, copier le fichier ONNX Git LFS sous le nom attendu par le dossier préparé de A.
+
+```powershell
+Copy-Item artifacts/vision.onnx workspace-data/lot-4/clip-prepared/clip.onnx
+```
+
+Les JPEG conservent les licences Creative Commons indiquées individuellement dans le manifeste, avec le crédit et la page d’origine. Les JPEG collectés au lot 4 ont été réencodés avec orientation appliquée et un côté maximum de 1 200 pixels. Les deux JPEG repris du pilote conservent les versions décrites dans le lot 3. [Crédits et licences](../data/lot-4/manifest.json) · [Versions des photos du pilote](lot-3-assets.md)
 
 ## Préparation, comparaison et test
 
